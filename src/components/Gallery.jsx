@@ -2,7 +2,7 @@
 const images = [
   {
     id: 1,
-    url: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fbeautiful-nature&psig=AOvVaw3XwKWCJ9k1wcrSOJOzdt6q&ust=1741632827029000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPj4hYLW_YsDFQAAAAAdAAAAABAE",
+    url: "https://michiganross.umich.edu/sites/default/files/images/news-story/butterfly.jpeg",
     caption: "Nature",
   },
   {
@@ -10,16 +10,25 @@ const images = [
     url: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eXxlbnwwfHwwfHx8MA%3D%3D",
     caption: "City",
   },
+  {
+    id: 3,
+    url: "https://plus.unsplash.com/premium_photo-1664882424626-f2f4cb557527?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    caption: "Girl",
+  },
 ];
 
 function Gallery() {
   return (
     <>
       {images.map((image) => (
-        <div key={image.id}>
-          <img src={image.url} alt={image.caption} />
+        <div className="" key={image.id}>
+          <img
+            src={image.url}
+            alt={image.caption}
+            className="w-72 h-44 rounded-lg object-cover mt-4"
+          />
           <p>{image.caption}</p>
-          <hr />
+          {/* <hr /> */}
         </div>
       ))}
     </>

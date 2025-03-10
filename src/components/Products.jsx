@@ -1,4 +1,3 @@
-// Example 1: Product List
 import React from "react";
 
 const products = [
